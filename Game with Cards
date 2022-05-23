@@ -24,3 +24,55 @@ who wins if Alice is the first player?
 who wins if Bob is the first player?
 
 
+#include <bits/stdc++.h>
+
+using namespace std;
+const int N=55;
+#define all(x) x.begin(),x.end()
+#define bll(x) (x), (x)+m
+#define forn(i, n) for(int i=1; i <= (n); ++i)
+#define forauto(i, n) for(int (i):(n));
+#define scanfor(a, n) for(int i=0;i <(n); ++i)scanf("%lld",a+i)
+#define int long long
+#define pb push_back
+#define NO {cout<<"NO\n";return;}
+#define YES {cout<<"YES\n";return;}
+#define sc(x) scanf("%lld",&x)
+const int mod=1e9+7;
+const int as=(1ll<<21ll)-1ll;
+int n,m;
+int a[N];
+int b[N];
+void Press_Shift_CMD_B(){
+    int mx1=0,mx2=0;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+        mx1=max(mx1,a[i]);
+    }
+    cin>>m;
+    for(int i=0;i<m;i++){
+        cin>>b[i];
+        mx2=max(mx2,b[i]);
+    }
+    if(mx1>=mx2){
+        cout<<"Alice\n";
+    }
+    else{
+        cout<<"Bob\n";
+    }
+    if(mx1<=mx2){
+        cout<<"Bob\n";
+        
+    }
+    else{
+        cout<<"Alice\n";
+    }
+}
+signed main(){
+    int _=1;
+    cin>>_;
+    while(_--)Press_Shift_CMD_B();
+    return 0;
+}
+
